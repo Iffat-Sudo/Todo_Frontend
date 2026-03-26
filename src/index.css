@@ -1,0 +1,119 @@
+
+:root {
+    /* Colors */
+    --primary-color: #2b2d42;
+    --primary-light: #363856;
+    --primary-dark: #1d1e2f;
+    --secondary-color: #8d99ae;
+    --secondary-light: #a5b0c1;
+    --secondary-dark: #6b7689;
+    --background-color: #edf2f4;
+    --background-light: #ffffff;
+    --text-light: #ffffff;
+
+    /* Social Colors */
+    --google-color: #ea4335;
+    --github-color: #24292e;
+    --twitter-color: #1da1f2;
+
+    /* Utility Colors */
+    --border-color: rgba(141, 153, 174, 0.2);
+    --shadow-color: rgba(43, 45, 66, 0.08);
+    --overlay-light: rgba(237, 242, 244, 0.1);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+/* Mobile brand styles */
+.mobile-brand {
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), #1d1e2f);
+    border-bottom: 1px solid rgba(237, 242, 244, 0.1);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem;
+}
+
+.mobile-brand .brand-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-brand .brand-content i,
+.mobile-brand i {
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 0.75rem;
+}
+
+.mobile-brand .brand-content h4,
+.mobile-brand h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sidebar-toggle {
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+
+/* Add to index.css */
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
